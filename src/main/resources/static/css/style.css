@@ -1,0 +1,61 @@
+/*
+Google maps kaart
+ */
+#map {
+  position: absolute;
+  margin: auto;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 850px;
+  width: 100%;
+}
+
+/*
+Een div-container voor een input-box
+ */
+#container {
+  position: absolute;
+  margin: auto;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 10;
+  border-radius: 20px;
+
+  width: 640px;
+  height: 90px;
+}
+
+/*
+Een input-box waar de user coordinaten kan invullen
+ */
+#coordinatenInput {
+  background-color: #09142E;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 20px;
+  color: white;
+  border-width: 0;
+  width: 640px;
+  height: 90px;
+
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*
+Een onzichtbare button om een event te kunnen uitvoeren
+ */
+#coordinatesButton {
+  background: transparent;
+  border: none;
+  font-size:0;
+}

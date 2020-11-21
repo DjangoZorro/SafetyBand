@@ -1,0 +1,26 @@
+.header {
+    font-size: 36px !important;
+    color: #242f51 !important;
+}
+
+.header-sub {
+    color: #242f51 !important;
+    font-size: 24px !important;
+}
+
+.text-center {
+    color: #616368 !important;
+
+}
+
+.mb-4 {
+    font-size: 16px !important;
+    color: #616368 !important;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
