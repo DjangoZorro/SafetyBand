@@ -1,9 +1,6 @@
 package the.challenge.safetyband.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Location {
@@ -27,6 +24,9 @@ public class Location {
     private String huisnummer;
 
     private String straatnaam;
+
+    @OneToOne(mappedBy = "location")
+    private Armband armband;
 
     public Integer getId() {
         return id;
@@ -98,5 +98,13 @@ public class Location {
 
     public void setStraatnaam(String straatnaam) {
         this.straatnaam = straatnaam;
+    }
+
+    public Armband getArmband() {
+        return armband;
+    }
+
+    public void setArmband(Armband armband) {
+        this.armband = armband;
     }
 }

@@ -1,9 +1,7 @@
 package the.challenge.safetyband.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class WebAdmin {
@@ -21,6 +19,10 @@ public class WebAdmin {
     private String naam;
 
     private String achternaam;
+
+    @ManyToMany
+    @JoinTable(name = "statistieken", joinColumns = @JoinColumn(name = "webadmin_id"), inverseJoinColumns = @JoinColumn(name = "statistieken_id"))
+    private Set<Statistieken> statistiekens;
 
     public Integer getId() {
         return id;
@@ -68,5 +70,13 @@ public class WebAdmin {
 
     public void setAchternaam(String achternaam) {
         this.achternaam = achternaam;
+    }
+
+    public Set<Statistieken> getStatistiekens() {
+        return statistiekens;
+    }
+
+    public void setStatistiekens(Set<Statistieken> statistiekens) {
+        this.statistiekens = statistiekens;
     }
 }
