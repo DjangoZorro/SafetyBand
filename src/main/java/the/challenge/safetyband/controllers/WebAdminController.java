@@ -10,6 +10,11 @@ import the.challenge.safetyband.repositories.WebAdminRepository;
 @Controller
 @RequestMapping(path = "/admin")
 public class WebAdminController {
+    @RequestMapping("/login")
+    public String login() {
+        return "webadmin/index";
+    }
+
     @Autowired
     private WebAdminRepository webAdminRepository;
 //    private PasswordEncoder passwordEncoder;
