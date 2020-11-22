@@ -3,10 +3,11 @@ package the.challenge.safetyband.domain;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "location")
 public class Location {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Integer id;
 
     private String breedtegraad;

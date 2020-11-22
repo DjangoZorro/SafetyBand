@@ -5,9 +5,11 @@ import java.sql.Time;
 import java.util.Set;
 
 @Entity
+@Table(name = "statistieken")
 public class Statistieken {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Integer id;
 
     private Integer aantal_keer_noodknop_ingedrukt;
@@ -28,8 +30,8 @@ public class Statistieken {
     @JoinColumn(name = "armband_id")
     private Armband armband;
 
-    @ManyToMany(mappedBy = "statistiekens")
-    private Set<WebAdmin> webAdmins;
+    @ManyToMany(mappedBy = "statistieken")
+    private Set<WebAdmin> webadmin;
 
     public Statistieken() {}
 
@@ -105,11 +107,11 @@ public class Statistieken {
         this.armband = armband;
     }
 
-    public Set<WebAdmin> getWebAdmins() {
-        return webAdmins;
+    public Set<WebAdmin> getWebadmin() {
+        return webadmin;
     }
 
-    public void setWebAdmins(Set<WebAdmin> webAdmins) {
-        this.webAdmins = webAdmins;
+    public void setWebadmin(Set<WebAdmin> webadmin) {
+        this.webadmin = webadmin;
     }
 }

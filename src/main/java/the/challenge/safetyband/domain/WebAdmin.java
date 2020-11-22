@@ -4,10 +4,11 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Table(name = "webadmin")
 public class WebAdmin {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Integer id;
 
     private String gebruikersnaam;
@@ -21,8 +22,8 @@ public class WebAdmin {
     private String achternaam;
 
     @ManyToMany
-    @JoinTable(name = "statistieken", joinColumns = @JoinColumn(name = "webadmin_id"), inverseJoinColumns = @JoinColumn(name = "statistieken_id"))
-    private Set<Statistieken> statistiekens;
+    @JoinTable(name = "webadmin_statistieken", joinColumns = @JoinColumn(name = "webadmin_id"), inverseJoinColumns = @JoinColumn(name = "statistieken_id"))
+    private Set<Statistieken> statistieken;
 
     public Integer getId() {
         return id;
@@ -72,11 +73,11 @@ public class WebAdmin {
         this.achternaam = achternaam;
     }
 
-    public Set<Statistieken> getStatistiekens() {
-        return statistiekens;
+    public Set<Statistieken> getStatistieken() {
+        return statistieken;
     }
 
-    public void setStatistiekens(Set<Statistieken> statistiekens) {
-        this.statistiekens = statistiekens;
+    public void setStatistieken(Set<Statistieken> statistieken) {
+        this.statistieken = statistieken;
     }
 }

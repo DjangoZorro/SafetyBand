@@ -4,9 +4,11 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Table(name = "armband")
 public class Armband {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Integer id;
 
     private String naam;
@@ -16,7 +18,7 @@ public class Armband {
     private Location location;
 
     @OneToMany(mappedBy = "armband")
-    private Set<Statistieken> statistiekens;
+    private Set<Statistieken> statistieken;
 
     public Integer getId() {
         return id;
@@ -42,11 +44,11 @@ public class Armband {
         this.location = location;
     }
 
-    public Set<Statistieken> getStatistiekens() {
-        return statistiekens;
+    public Set<Statistieken> getStatistieken() {
+        return statistieken;
     }
 
-    public void setStatistiekens(Set<Statistieken> statistiekens) {
-        this.statistiekens = statistiekens;
+    public void setStatistieken(Set<Statistieken> statistieken) {
+        this.statistieken = statistieken;
     }
 }
