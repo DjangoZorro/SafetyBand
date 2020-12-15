@@ -1,15 +1,26 @@
 package the.challenge.safetyband.domain;
 
+import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Set;
 
-@Entity
-@Table(name = "webadmin")
-public class WebAdmin {
+@Getter
+@Setter
+@Builder
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity(name = "webadmin")
+public class WebAdmin implements UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String gebruikersnaam;
 
@@ -21,63 +32,53 @@ public class WebAdmin {
 
     private String achternaam;
 
+    @Builder.Default
+    private UserRole userRole = UserRole.USER;
+
+    @Builder.Default
+    private Boolean locked = false;
+
+    @Builder.Default
+    private Boolean enabled = false;
+
     @ManyToMany
     @JoinTable(name = "webadmin_statistieken", joinColumns = @JoinColumn(name = "webadmin_id"), inverseJoinColumns = @JoinColumn(name = "statistieken_id"))
     private Set<Statistieken> statistieken;
 
-    public Integer getId() {
-        return id;
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+
+        final SimpleGrantedAuthority simpleGrantedAuthority = new SimpleGrantedAuthority(userRole.name());
+        return Collections.singletonList(simpleGrantedAuthority);
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getGebruikersnaam() {
-        return gebruikersnaam;
-    }
-
-    public void setGebruikersnaam(String gebruikersnaam) {
-        this.gebruikersnaam = gebruikersnaam;
-    }
-
-    public String getWachtwoord() {
+    @Override
+    public String getPassword() {
         return wachtwoord;
     }
 
-    public void setWachtwoord(String wachtwoord) {
-        this.wachtwoord = wachtwoord;
-    }
-
-    public String getEmail() {
+    @Override
+    public String getUsername() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
     }
 
-    public String getNaam() {
-        return naam;
+    @Override
+    public boolean isAccountNonLocked() {
+        return !locked;
     }
 
-    public void setNaam(String naam) {
-        this.naam = naam;
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
     }
 
-    public String getAchternaam() {
-        return achternaam;
-    }
-
-    public void setAchternaam(String achternaam) {
-        this.achternaam = achternaam;
-    }
-
-    public Set<Statistieken> getStatistieken() {
-        return statistieken;
-    }
-
-    public void setStatistieken(Set<Statistieken> statistieken) {
-        this.statistieken = statistieken;
+    @Override
+    public boolean isEnabled() {
+        return enabled;
     }
 }
