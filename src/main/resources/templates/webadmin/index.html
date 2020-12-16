@@ -80,7 +80,7 @@
     <form class="form-signin" role="form" th:action="@{/sign-in}" th:method="post">
         <div th:if="${param.error}">
             <div class="alert alert-danger">
-                Verkeerde gebruikersnaam en/of wachtwoord.
+                Verkeerde E-Mail en/of Wachtwoord.
             </div>
         </div>
         <h1 class="u-align-center u-custom-font u-text u-text-1">
@@ -89,10 +89,10 @@
         </h1>
         <br>
         <h3 class="h3 mb-3 font-weight-normal" style="color: white !important">Log in alstublieft</h3>
-        <label for="gebruikersnaam" class="sr-only">Gebruikersnaam</label>
-        <input type="text" id="gebruikersnaam" class="form-control" placeholder="Gebruikersnaam" required autofocus>
-        <label for="wachtwoord" class="sr-only">Wachtwoord</label>
-        <input type="password" id="wachtwoord" class="form-control" placeholder="Wachtwoord" required>
+        <label for="username" class="sr-only">E-Mail</label>
+        <input name="username" type="email" id="username" class="form-control" placeholder="E-Mail" required autofocus>
+        <label for="password" class="sr-only">Wachtwoord</label>
+        <input name="password" type="password" id="password" class="form-control" placeholder="Wachtwoord" required>
         <div class="checkbox mb-3">
             <label style="color: #6c757d !important">
                 <input type="checkbox" value="remember-me"> Onthoudt mij

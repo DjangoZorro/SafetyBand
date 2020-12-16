@@ -13,6 +13,8 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import the.challenge.safetyband.service.WebAdminService;
 
+import javax.sql.DataSource;
+
 @Configuration
 @AllArgsConstructor
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -21,6 +23,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    @Autowired
+    private DataSource dataSource;
+
+    @Autowired
+    public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(webAdminService)
+                .passwordEncoder(bCryptPasswordEncoder);
+    }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
@@ -28,18 +39,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/sign-up/**", "/sign-in/**")
                 .permitAll()
+                .anyRequest().authenticated()
                 .and()
-                .formLogin(form -> form
-                        .loginPage("/sign-in")
-                        .defaultSuccessUrl("/")
-                        .failureUrl("/sign-in?error=true")
-                );
-      }
-
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(webAdminService)
-                .passwordEncoder(bCryptPasswordEncoder);
+                .formLogin().permitAll()
+                .loginPage("/sign-in");
     }
 
     @Override
@@ -47,17 +50,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         web.ignoring()
                 .antMatchers("/resources/**", "/static/**");
     }
-
-//    @Bean
-//    public DaoAuthenticationProvider authProvider() {
-//        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-//        authProvider.setUserDetailsService(userDetailsService);
-//        authProvider.setPasswordEncoder(passwordEncoder);
-//        return authProvider;
-//    }
-//
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) {
-//        auth.authenticationProvider(authProvider());
-//    }
 }
