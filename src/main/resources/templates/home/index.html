@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
@@ -54,20 +54,20 @@
 <body class="u-body">
 <section class="u-clearfix u-section-1" id="sec-b34a">
     <p class="u-text u-text-custom-color-1 u-text-1">
-        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-custom-color-1 u-btn-1" href="https://nicepage.com">Safety<font class="u-text-black">Band</font>
+        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-custom-color-1 u-btn-1" href="#">Safety<font class="u-text-black">Band</font>
         </a>
     </p>
     <p class="u-text u-text-default u-text-2">
-        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-2" href="https://nicepage.com">Home</a>
+        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-2" th:href="@{/}">Home</a>
     </p>
     <p class="u-text u-text-3">
-        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-3" href="https://nicepage.com">Over Ons</a>
+        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-3" th:href="@{/over-ons}">Over Ons</a>
     </p>
     <p class="u-text u-text-default u-text-4">
-        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-4" href="https://nicepage.com">Prijzen</a>
+        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-4" th:href="@{/prijzen}">Prijzen</a>
     </p>
     <p class="u-text u-text-default u-text-5">
-        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-5" href="https://nicepage.com">FAQ</a>
+        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-5" th:href="@{/faq}">FAQ</a>
     </p>
     <div class="u-black u-container-style u-group u-radius-45 u-shape-round u-group-1" data-toggle="modal" data-target=".bd-example-modal-lg">
         <div class="u-container-layout u-valign-middle u-container-layout-1">
@@ -316,26 +316,26 @@
                 <div class="u-layout-row">
                     <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-1">
                         <div class="u-container-layout u-valign-middle u-container-layout-1">
-                            <a href="https://nicepage.com"
+                            <a href="#"
                                class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-1">Home</a>
                         </div>
                     </div>
                     <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-2">
                         <div class="u-container-layout u-valign-middle u-container-layout-2">
-                            <a href="https://nicepage.com"
+                            <a href="#"
                                class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-2">Over
                                 ons</a>
                         </div>
                     </div>
                     <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-3">
                         <div class="u-container-layout u-valign-middle u-container-layout-3">
-                            <a href="https://nicepage.com"
+                            <a href="#"
                                class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-3">Prijzen</a>
                         </div>
                     </div>
                     <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-4">
                         <div class="u-container-layout u-valign-middle u-container-layout-4">
-                            <a href="https://nicepage.com"
+                            <a href="#"
                                class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-4">FAQ</a>
                         </div>
                     </div>

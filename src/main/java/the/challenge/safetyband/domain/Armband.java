@@ -12,6 +12,7 @@ public class Armband {
     private Integer id;
 
     private String naam;
+    private boolean actief;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "location_id", referencedColumnName = "id")
@@ -34,6 +35,14 @@ public class Armband {
 
     public void setNaam(String naam) {
         this.naam = naam;
+    }
+
+    public boolean isActief() {
+        return actief;
+    }
+
+    public void setActief(boolean actief) {
+        this.actief = actief;
     }
 
     public Location getLocation() {
