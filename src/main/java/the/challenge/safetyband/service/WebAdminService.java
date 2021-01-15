@@ -37,7 +37,7 @@ public class WebAdminService implements UserDetailsService {
         mailMessage.setTo(webAdminMail);
         mailMessage.setSubject("SafetyBand - Verificatie E-Mail!");
         mailMessage.setFrom("newneonretro@gmail.com");
-        mailMessage.setText("Bedankt voor het registreren. Klik op de link hieronder om uw account te activeren." + "http://localhost:8080/sign-up/confirm?token=" + token);
+        mailMessage.setText("Bedankt voor het registreren. Klik op de link hieronder om uw account te activeren. " + "http://localhost:8080/sign-up/confirm?token=" + token);
         emailService.sendEmail(mailMessage);
     }
 
