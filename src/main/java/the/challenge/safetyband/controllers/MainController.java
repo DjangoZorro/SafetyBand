@@ -24,4 +24,9 @@ public class MainController {
     public String faq() {
         return "home/faq";
     }
+
+    @RequestMapping("/locatie")
+    public String locatie() {
+        return "home/locatie";
+    }
 }
