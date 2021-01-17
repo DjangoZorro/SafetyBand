@@ -1,53 +1,53 @@
-.u-section-2 {
-  background-image: url("images/prijzen.png");
+.u-section-prijzen {
+  background-image: url("/images/prijzen.png");
 }
 
-.u-section-2 .u-sheet-1 {
+.u-section-prijzen .u-sheet-1 {
   min-height: 824px;
 }
 
-.u-section-2 .u-text-1 {
+.u-section-prijzen .u-text-1 {
   font-size: 6rem;
   margin: 274px 331px 0 382px;
 }
 
-.u-section-2 .u-image-1 {
+.u-section-prijzen .u-image-1 {
   width: 299px;
   height: 378px;
   margin: -217px 114px 60px auto;
 }
 
 @media (max-width: 1199px) {
-  .u-section-2 .u-sheet-1 {
+  .u-section-prijzen .u-sheet-1 {
     min-height: 679px;
   }
 
-  .u-section-2 .u-text-1 {
+  .u-section-prijzen .u-text-1 {
     width: auto;
     margin-top: 243px;
     margin-right: 206px;
     margin-left: 260px;
   }
 
-  .u-section-2 .u-image-1 {
+  .u-section-prijzen .u-image-1 {
     margin-top: -198px;
     margin-right: 40px;
   }
 }
 
 @media (max-width: 991px) {
-  .u-section-2 .u-sheet-1 {
+  .u-section-prijzen .u-sheet-1 {
     min-height: 589px;
   }
 
-  .u-section-2 .u-text-1 {
+  .u-section-prijzen .u-text-1 {
     margin-top: 232px;
     margin-right: 21px;
     margin-left: 225px;
     font-size: 4.5rem;
   }
 
-  .u-section-2 .u-image-1 {
+  .u-section-prijzen .u-image-1 {
     width: 249px;
     height: 313px;
     margin-top: -173px;
@@ -56,18 +56,18 @@
 }
 
 @media (max-width: 767px) {
-  .u-section-2 .u-sheet-1 {
+  .u-section-prijzen .u-sheet-1 {
     min-height: 442px;
   }
 
-  .u-section-2 .u-text-1 {
+  .u-section-prijzen .u-text-1 {
     font-size: 3.75rem;
     margin-top: -389px;
     margin-right: 0;
     margin-left: 66px;
   }
 
-  .u-section-2 .u-image-1 {
+  .u-section-prijzen .u-image-1 {
     width: 208px;
     height: 263px;
     margin-top: 400px;
@@ -76,17 +76,17 @@
 }
 
 @media (max-width: 575px) {
-  .u-section-2 .u-sheet-1 {
+  .u-section-prijzen .u-sheet-1 {
     min-height: 527px;
   }
 
-  .u-section-2 .u-text-1 {
+  .u-section-prijzen .u-text-1 {
     font-size: 3rem;
     margin-top: -248px;
     margin-left: 0;
   }
 
-  .u-section-2 .u-image-1 {
+  .u-section-prijzen .u-image-1 {
     width: 193px;
     height: 244px;
     margin-top: 298px;
