@@ -1,0 +1,95 @@
+.u-section-overons {
+  background-image: url("/images/prijzen.png");
+}
+
+.u-section-overons .u-sheet-1 {
+  min-height: 824px;
+}
+
+.u-section-overons .u-text-1 {
+  font-size: 5rem;
+  margin: 274px 331px 0 382px;
+}
+
+.u-section-overons .u-image-1 {
+  width: 299px;
+  height: 378px;
+  margin: -217px 114px 60px auto;
+}
+
+@media (max-width: 1199px) {
+  .u-section-overons .u-sheet-1 {
+    min-height: 679px;
+  }
+
+  .u-section-overons .u-text-1 {
+    width: auto;
+    margin-top: 243px;
+    margin-right: 206px;
+    margin-left: 260px;
+  }
+
+  .u-section-overons .u-image-1 {
+    margin-top: -198px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-overons .u-sheet-1 {
+    min-height: 589px;
+  }
+
+  .u-section-overons .u-text-1 {
+    margin-top: 232px;
+    margin-right: 21px;
+    margin-left: 225px;
+    font-size: 4.5rem;
+  }
+
+  .u-section-overons .u-image-1 {
+    width: 249px;
+    height: 313px;
+    margin-top: -173px;
+    margin-right: -22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-overons .u-sheet-1 {
+    min-height: 442px;
+  }
+
+  .u-section-overons .u-text-1 {
+    font-size: 3.75rem;
+    margin-top: -389px;
+    margin-right: 0;
+    margin-left: 66px;
+  }
+
+  .u-section-overons .u-image-1 {
+    width: 208px;
+    height: 263px;
+    margin-top: 400px;
+    margin-right: -15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-overons .u-sheet-1 {
+    min-height: 527px;
+  }
+
+  .u-section-overons .u-text-1 {
+    font-size: 3rem;
+    margin-top: -248px;
+    margin-left: 0;
+  }
+
+  .u-section-overons .u-image-1 {
+    width: 193px;
+    height: 244px;
+    margin-top: 298px;
+    margin-right: -37px;
+  }
+}
