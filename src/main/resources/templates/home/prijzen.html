@@ -7,17 +7,32 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>SafetyBand</title>
+<!--    <link rel="stylesheet" href="/css/index.css">-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="/css/nicepage1.css" media="screen">-->
+<!--    <link rel="stylesheet" href="/css/Page-11.css" media="screen">-->
+
+<!--    <link rel="stylesheet" href="/css/nicepage.css" media="screen">-->
+<!--    <link rel="stylesheet" href="/css/Pagina-1.css" media="screen">-->
+<!--    <link rel="stylesheet" href="/css/nicepage3.css" media="screen">-->
+<!--    <link rel="stylesheet" href="/css/Page-13.css" media="screen">-->
+<!--    <link rel="stylesheet" href="/css/Page-1.css" media="screen">-->
+<!--    <link rel="stylesheet" href="/css/Page-2.css" media="screen">-->
+<!--    <link rel="stylesheet" href="/css/overons.css">-->
+
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/nicepage1.css" media="screen">
     <link rel="stylesheet" href="/css/Page-11.css" media="screen">
-
+    <script class="u-script" type="text/javascript" src="/js/jquery1.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/js/nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/js/jquery3.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/js/nicepage3.js" defer=""></script>
     <link rel="stylesheet" href="/css/nicepage.css" media="screen">
     <link rel="stylesheet" href="/css/Pagina-1.css" media="screen">
     <link rel="stylesheet" href="/css/nicepage3.css" media="screen">
     <link rel="stylesheet" href="/css/Page-13.css" media="screen">
-    <link rel="stylesheet" href="/css/Page-1.css" media="screen">
-    <link rel="stylesheet" href="/css/Page-2.css" media="screen">
+    <link rel="stylesheet" href="/css/overons.css">
 
     <!--De link naar CSS sheet-->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -40,6 +55,8 @@
           href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Paytone+One:400">
 
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index2.css">
     <script src="/js/index2.js"></script>
     <!--De link naar google API-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQIWRbnpkFpMJYEyUfTbIGubHptuyJNao&callback=initMap&libraries=&v=weekly"
@@ -64,18 +81,92 @@
     <meta property="og:url" content="index.html">
 </head>
 
-<!-- Nav -->
 <body class="u-body">
 
-    <!-- END nav -->
-
 <!-- HERO -->
-    <section class="u-clearfix u-image u-section-prijzen" id="sec-8ff2" data-image-width="1400" data-image-height="995">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <h1 class="u-text u-text-body-alt-color u-title u-text-1">PRIJZEN</h1>
-            <img src="images/Ring_copy.png" alt="" class="u-image u-image-default u-image-1" data-image-width="299" data-image-height="378">
+    <section class="u-clearfix u-section-1" id="sec-b34a">
+        <p class="u-text u-text-custom-color-1 u-text-1">
+            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-custom-color-1 u-btn-1" th:href="@{/}">Safety<font class="u-text-black">Band</font>
+            </a>
+        </p>
+        <p class="u-text u-text-default u-text-2">
+            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-2" th:href="@{/}">Home</a>
+        </p>
+        <p class="u-text u-text-3">
+            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-3" th:href="@{/over-ons}">Over Ons</a>
+        </p>
+        <p class="u-text u-text-default u-text-4">
+            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-4" th:href="@{/prijzen}">Prijzen</a>
+        </p>
+        <p class="u-text u-text-default u-text-5">
+            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-5" th:href="@{/faq}">FAQ</a>
+        </p>
+        <div class="u-black u-container-style u-group u-radius-45 u-shape-round u-group-1" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <div class="u-container-layout u-valign-middle u-container-layout-1">
+                <p class="u-text u-text-6">
+                    <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-6">Locatie check</a>
+                </p>
+            </div>
         </div>
+        <br>
+        <section>
+            <!-- HERO -->
+            <section class="u-clearfix u-image u-section-overons" id="sec-8ff2" data-image-width="1400" data-image-height="995">
+                <div class="u-clearfix u-sheet u-sheet-1">
+                    <h1 class="u-text u-text-body-alt-color u-title u-text-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prijzen</h1>
+                    <img src="images/Ring_copy.png" alt="" class="u-image u-image-default u-image-1" data-image-width="299" data-image-height="378">
+                </div>
+            </section>
+            <!-- END HERO -->
+        </section>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!--Een container-div voor een input-box en een onzichtbare button-->
+                    <div id ="container">
+
+                        <!--Een input-box, hier kan iemand de coordinaten intypen (later wordt dit het armband-ID)-->
+                        <input type = "text"
+                               id = "coordinatenInput"
+                               onfocus = "this.value=''"
+                               value = "breedtegraad,lengtegraad" />
+
+                        <!--Een onzichtbare button om een eventListener te laten werken-->
+                        <button id = "coordinatesButton" onclick="initMap()">button</button>
+
+                        <!--Een script die de eventListener maakt-->
+                        <script>
+            const input = document.getElementById("coordinatenInput");
+
+            input.addEventListener("keyup", function(event) {
+                if(event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("coordinatesButton").click();
+                }
+            });
+        </script>
+                    </div>
+
+                    <!--De div voor de kaart-->
+                    <div id="map"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <!-- END HERO -->
 
 
@@ -143,24 +234,24 @@
     <section class="u-align-left u-clearfix u-section-100" id="sec-0a41">
         <div class="u-clearfix u-sheet u-sheet-1">
             <h2 class="u-align-center u-text u-text-custom-color-1 u-text-10">Neem contact met ons op</h2>
-            <br>
-            <p class="u-align-center u-text u-text-custom-color-1 u-text-default u-text-20">Naam</p>
+            <br><br><br><br>
+<!--            <p class="u-align-center u-text u-text-custom-color-1 u-text-default u-text-20">Naam</p>-->
             <div class="u-form u-form-1">
                 <form action="#" method="POST" class="u-clearfix u-form-spacing-37 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
                     <div class="u-form-group u-form-group-1">
-                        <label for="text-0564" class="u-form-control-hidden u-label"></label>
+                        <label for="text-0564" class="u-label">Naam</label>
                         <input type="text" placeholder="" id="text-0564" name="text-2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
                     </div>
                     <div class="u-form-group u-form-group-2">
-                        <label for="text-7c2e" class="u-form-control-hidden u-label"></label>
+                        <label for="text-7c2e" class="u-label">Achternaam</label>
                         <input type="text" placeholder="" id="text-7c2e" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
                     </div>
                     <div class="u-form-group u-form-group-3">
-                        <label for="text-b340" class="u-form-control-hidden u-label"></label>
+                        <label for="text-b340" class="u-label">Email</label>
                         <input type="text" placeholder="" id="text-b340" name="text-3" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
                     </div>
                     <div class="u-form-group u-form-group-4">
-                        <label for="text-0960" class="u-form-control-hidden u-label"></label>
+                        <label for="text-0960" class="u-label">Telefoonnummer</label>
                         <input type="text" placeholder="" id="text-0960" name="text-4" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
                     </div>
                     <div class="u-align-left u-form-group u-form-submit u-form-group-5">
@@ -173,10 +264,10 @@
                     <input type="hidden" value="" name="recaptchaResponse">
                 </form>
             </div>
-            <p class="u-align-center u-text u-text-custom-color-1 u-text-default u-text-3">Achternaam</p>
-            <p class="u-align-center u-text u-text-custom-color-1 u-text-4">Email</p>
-            <p class="u-align-center u-text u-text-custom-color-1 u-text-default u-text-5">Telefoonnummer</p>
-            <div class="u-container-style u-group u-group-1">
+<!--            <p class="u-align-center u-text u-text-custom-color-1 u-text-default u-text-3"></p>-->
+<!--            <p class="u-align-center u-text u-text-custom-color-1 u-text-4"></p>-->
+<!--            <p class="u-align-center u-text u-text-custom-color-1 u-text-default u-text-5"></p>-->
+            <div class="u-container-style u-group u-group-1" style="margin-top: -500px !important;">
                 <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-1">
                     <img src="/images/HHS_adres_sprint5.png" alt="" class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-align-right-xl u-expanded-width u-image u-image-default u-image-1" data-image-width="929" data-image-height="611">
                     <p class="u-text u-text-custom-color-1 u-text-default u-text-6">HOOFDLOCATIE</p>
@@ -304,26 +395,26 @@
                     <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-1">
                         <div class="u-container-layout u-valign-middle u-container-layout-1">
                             <a href="#"
-                               class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-1">Home</a>
+                               class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-1" th:href="@{/}">Home</a>
                         </div>
                     </div>
                     <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-2">
                         <div class="u-container-layout u-valign-middle u-container-layout-2">
                             <a href="#"
-                               class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-2">Over
+                               class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-2" th:href="@{/over-ons}">Over
                                 ons</a>
                         </div>
                     </div>
                     <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-3">
                         <div class="u-container-layout u-valign-middle u-container-layout-3">
                             <a href="#"
-                               class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-3">Prijzen</a>
+                               class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-3" th:href="@{/prijzen}">Prijzen</a>
                         </div>
                     </div>
                     <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-4">
                         <div class="u-container-layout u-valign-middle u-container-layout-4">
                             <a href="#"
-                               class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-4">FAQ</a>
+                               class="u-align-center u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-body-alt-color u-btn-4" th:href="@{/faq}">FAQ</a>
                         </div>
                     </div>
                 </div>
