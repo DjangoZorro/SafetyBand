@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import the.challenge.safetyband.domain.Armband;
 import the.challenge.safetyband.repositories.ArmbandRepository;
+
+import java.util.Optional;
 
 @Controller
 public class ArmbandController {
@@ -65,5 +65,15 @@ public class ArmbandController {
         Armband armband = armbandRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Verkeerde armband ID:" + id));
         armbandRepository.delete(armband);
         return "redirect:/index";
+    }
+
+    @GetMapping(path = "/locationByID")
+    public @ResponseBody
+    String[] getLocationByArmbandID(@RequestParam long id) {
+        Optional<Armband> a = armbandRepository.findById(id);
+        String lengtegraad = a.get().getLocation().getLengtegraad();
+        String breedtegraad = a.get().getLocation().getBreedtegraad();
+        String[] location = {lengtegraad, breedtegraad};
+        return location;
     }
 }

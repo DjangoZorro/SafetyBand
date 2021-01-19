@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import the.challenge.safetyband.domain.Location;
 import the.challenge.safetyband.repositories.LocationRepository;
 
+import java.util.Optional;
+
 @Controller
 public class LocationController {
 
@@ -83,5 +85,12 @@ public class LocationController {
         Location location = locationRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Verkeerde locatie ID:" + id));
         locationRepository.delete(location);
         return "redirect:/location/index";
+    }
+
+    @GetMapping(path = "/byID")
+    public @ResponseBody
+    Optional<Location> getLocationByID(@RequestParam long id) {
+
+        return locationRepository.findById(id);
     }
 }
