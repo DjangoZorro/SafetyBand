@@ -83,6 +83,15 @@
             </p>
         </div>
     </div>
+
+    <div class="text-center" sec:authorize="isAuthenticated()">
+<!--        <h1 sec:authentication="name">NAU</h1>-->
+        <h3 th:inline="text">Welkom [[${#httpServletRequest.remoteUser}]]!</h3>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
+
     <!-- END nav -->
 <!-- Image hero-banner -->
     <p class="u-text u-text-7">Lorem ipsum sit omis natus sinta</p>

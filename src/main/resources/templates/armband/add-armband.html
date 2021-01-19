@@ -5,6 +5,7 @@
     <title>Armband - ADD</title>
 </head>
 <body>
+<div sec:authorize="isAuthenticated()">
     <form action="#" th:action="@{/addarmband}" th:object="${armband}" method="post">
         <label for="naam">Naam</label>
         <input type="text" th:field="*{naam}" id="naam" placeholder="Naam">
@@ -16,5 +17,6 @@
         <span th:if="${#fields.hasErrors('actief')}" th:errors="*{actief}"></span>
         <input type="submit" value="Update Armband">
     </form>
+</div>
 </body>
 </html>

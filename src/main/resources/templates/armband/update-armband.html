@@ -5,6 +5,7 @@
     <title>Armband - UPDATE</title>
 </head>
 <body>
+<div sec:authorize="isAuthenticated()">
 <form action="#"
       th:action="@{/update/{id}(id=${armband.id})}"
       th:object="${armband}"
@@ -19,5 +20,6 @@
     <span th:if="${#fields.hasErrors('actief')}" th:errors="*{actief}"></span>
     <input type="submit" value="Update Armband">
 </form>
+</div>
 </body>
 </html>
