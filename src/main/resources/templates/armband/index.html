@@ -1,0 +1,40 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Armband - CRUD</title>
+</head>
+<body>
+<div sec:authorize="isAuthenticated()">
+    <div th:switch="${armband}">
+        <h2 th:case="null">Er zijn geen armbanden!</h2>
+        <div th:case="*">
+            <h2>Armbanden</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Naam</th>
+                    <th>Actief</th>
+                    <th>Locatie_ID</th>
+                    <th>Edit</th>
+                    <th>Verwijder</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="armband : ${armband}">
+                    <td th:text="${armband.id}"></td>
+                    <td th:text="${armband.naam}"></td>
+                    <td th:text="${armband.actief}"></td>
+                    <td th:text="${armband.location}"></td>
+                    <td><a th:href="@{/edit/{id}(id=${armband.id})}">Edit</a></td>
+                    <td><a th:href="@{/delete/{id}(id=${armband.id})}">Verwijder</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><a href="/armband">Voeg een nieuwe armband toe</a></p>
+    </div>
+</div>
+</body>
+</html>

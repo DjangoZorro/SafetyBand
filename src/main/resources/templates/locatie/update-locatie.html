@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Locatie - UPDATE</title>
+</head>
+<body>
+<form action="#" th:action="@{/location/update/{id}(id=${location.id})}" th:object="${location}" method="post">
+    <label for="breedtegraad">Breedtegraad</label>
+    <input type="text" th:field="*{breedtegraad}" id="breedtegraad" placeholder="Breedtegraad">
+    <span th:if="${#fields.hasErrors('breedtegraad')}" th:errors="*{breedtegraad}"></span>
+
+    <label for="lengtegraad">Lengtegraad</label>
+    <input type="text" th:field="*{lengtegraad}" id="lengtegraad" placeholder="Lengtegraad">
+    <span th:if="${#fields.hasErrors('lengtegraad')}" th:errors="*{lengtegraad}"></span>
+
+    <label for="land">Land</label>
+    <input type="text" th:field="*{land}" id="land" placeholder="Land">
+    <span th:if="${#fields.hasErrors('land')}" th:errors="*{land}"></span>
+
+    <label for="provincie">Provincie</label>
+    <input type="text" th:field="*{provincie}" id="provincie" placeholder="Provincie">
+    <span th:if="${#fields.hasErrors('provincie')}" th:errors="*{provincie}"></span>
+
+    <label for="stad">Stad</label>
+    <input type="text" th:field="*{stad}" id="stad" placeholder="Stad">
+    <span th:if="${#fields.hasErrors('stad')}" th:errors="*{stad}"></span>
+
+    <label for="postcode">Postcode</label>
+    <input type="text" th:field="*{postcode}" id="postcode" placeholder="Postcode">
+    <span th:if="${#fields.hasErrors('postcode')}" th:errors="*{postcode}"></span>
+
+    <label for="huisnummer">Huisnummer</label>
+    <input type="text" th:field="*{huisnummer}" id="huisnummer" placeholder="Huisnummer">
+    <span th:if="${#fields.hasErrors('huisnummer')}" th:errors="*{huisnummer}"></span>
+
+    <label for="straatnaam">Straatnaam</label>
+    <input type="text" th:field="*{straatnaam}" id="straatnaam" placeholder="Straatnaam">
+    <span th:if="${#fields.hasErrors('straatnaam')}" th:errors="*{straatnaam}"></span>
+
+    <input type="submit" value="Update Locatie">
+</form>
+</body>
+</html>

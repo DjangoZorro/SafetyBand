@@ -8,8 +8,7 @@ import java.util.Set;
 public class Armband {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Integer id;
+    private long id;
 
     private String naam;
     private boolean actief;
@@ -21,11 +20,11 @@ public class Armband {
     @OneToMany(mappedBy = "armband")
     private Set<Statistieken> statistieken;
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 

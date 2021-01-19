@@ -1,0 +1,20 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Armband - ADD</title>
+</head>
+<body>
+    <form action="#" th:action="@{/addarmband}" th:object="${armband}" method="post">
+        <label for="naam">Naam</label>
+        <input type="text" th:field="*{naam}" id="naam" placeholder="Naam">
+        <span th:if="${#fields.hasErrors('naam')}" th:errors="*{naam}"></span>
+        <select th:field="*{actief}">
+            <option th:value="true" th:text="Actief"></option>
+            <option th:value="false" th:text="Non-Actief"></option>
+        </select>
+        <span th:if="${#fields.hasErrors('actief')}" th:errors="*{actief}"></span>
+        <input type="submit" value="Update Armband">
+    </form>
+</body>
+</html>

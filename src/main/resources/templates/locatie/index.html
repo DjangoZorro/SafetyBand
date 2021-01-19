@@ -1,0 +1,50 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Locatie - CRUD</title>
+</head>
+<body>
+<div sec:authorize="isAuthenticated()">
+    <div th:switch="${location}">
+        <h2 th:case="null">Er zijn geen locaties!</h2>
+        <div th:case="*">
+            <h2>Locaties</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Breedtegraad</th>
+                    <th>Lengtegraad</th>
+                    <th>Land</th>
+                    <th>Provincie</th>
+                    <th>Stad</th>
+                    <th>Postcode</th>
+                    <th>Huisnummer</th>
+                    <th>Straatnaam</th>
+                    <th>Edit</th>
+                    <th>Verwijder</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="location : ${location}">
+                    <td th:text="${location.id}"></td>
+                    <td th:text="${location.breedtegraad}"></td>
+                    <td th:text="${location.lengtegraad}"></td>
+                    <td th:text="${location.land}"></td>
+                    <td th:text="${location.provincie}"></td>
+                    <td th:text="${location.stad}"></td>
+                    <td th:text="${location.postcode}"></td>
+                    <td th:text="${location.huisnummer}"></td>
+                    <td th:text="${location.straatnaam}"></td>
+                    <td><a th:href="@{/location/edit/{id}(id=${location.id})}">Edit</a></td>
+                    <td><a th:href="@{/location/delete/{id}(id=${location.id})}">Verwijder</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><a href="/location/locations">Voeg een nieuwe locatie toe</a></p>
+    </div>
+</div>
+</body>
+</html>
