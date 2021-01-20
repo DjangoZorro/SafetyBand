@@ -67,7 +67,7 @@ public class ArmbandController {
         return "redirect:/index";
     }
 
-    @GetMapping(path = "/locationByID")
+    @GetMapping(path = "/armband/locationByID")
     public @ResponseBody
     String[] getLocationByArmbandID(@RequestParam long id) {
         Optional<Armband> a = armbandRepository.findById(id);

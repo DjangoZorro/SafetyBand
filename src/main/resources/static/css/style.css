@@ -59,3 +59,35 @@ Een onzichtbare button om een event te kunnen uitvoeren
   border: none;
   font-size:0;
 }
+
+#newIDButtonContainer {
+  position: absolute;
+
+  visibility: hidden;
+  top: 90px;
+  z-index: 10;
+  border-radius: 20px;
+
+  width: 90px;
+  height: 60px;
+}
+
+#newIDButton {
+  background-color: #09142E;
+
+  border-radius: 20px;
+  color: white;
+  border-width: 0;
+  width: 90px;
+  height: 60px;
+
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  font-size: 32px;
+  color:white;
+}

@@ -112,6 +112,9 @@
                 </button>
             </div>
             <div class="modal-body">
+                <div id ="newIDButtonContainer">
+                    <button id="newIDButton" onclick="newID()">+</button>
+                </div>
                 <!--Een container-div voor een input-box en een onzichtbare button-->
                 <div id ="container">
 
@@ -119,22 +122,22 @@
                     <input type = "text"
                            id = "coordinatenInput"
                            onfocus = "this.value=''"
-                           value = "breedtegraad,lengtegraad" />
+                           value = "Vul hier je armband ID in" />
 
                     <!--Een onzichtbare button om een eventListener te laten werken-->
-                    <button id = "coordinatesButton" onclick="initMap()">button</button>
+                    <button id = "coordinatesButton" onclick="initMap(); disappear()">button</button>
 
                     <!--Een script die de eventListener maakt-->
                     <script>
-            const input = document.getElementById("coordinatenInput");
+                        const input = document.getElementById("coordinatenInput");
 
-            input.addEventListener("keyup", function(event) {
-                if(event.keyCode === 13) {
-                    event.preventDefault();
-                    document.getElementById("coordinatesButton").click();
-                }
-            });
-        </script>
+                        input.addEventListener("keyup", function(event) {
+                            if(event.keyCode === 13) {
+                                event.preventDefault();
+                                document.getElementById("coordinatesButton").click();
+                            }
+                        });
+                    </script>
                 </div>
 
                 <!--De div voor de kaart-->
